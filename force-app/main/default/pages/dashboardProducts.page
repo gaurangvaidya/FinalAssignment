@@ -1,0 +1,16 @@
+<apex:page controller="dashboardController">
+<apex:pageBlock>
+    <apex:pageBlockSection title="Dashboard">
+
+    <apex:pageBlockTable value="{!productList}" var="product">
+
+    <apex:column headerValue="Id" value="{!product.Id}"></apex:column>
+    <apex:column headerValue="Name" value="{!product.Name}"></apex:column>
+    <apex:column headerValue="Customer ID" value="{!product.CustomerID__c}"></apex:column>
+    <apex:column headerValue="Status" value="{!product.Status__c}"></apex:column>
+    <apex:column headerValue="Driver Assigned" value="{!product.DriverAssigned__c}"></apex:column>
+    </apex:pageBlockTable>
+    </apex:pageBlockSection>
+
+</apex:pageBlock>
+</apex:page>

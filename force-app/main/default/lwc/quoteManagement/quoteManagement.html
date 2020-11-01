@@ -1,0 +1,44 @@
+<template>
+
+
+    <lightning-card title="Quote Management">
+        <lightning-combobox options={options} value={comboBoxValue} label="Select User" onchange={handleOnChangeComboBox}>
+
+        </lightning-combobox>
+        <template if:true = {prices}>
+
+            <template for:each={prices} for:item="price">
+
+                <div key={price.id}>
+                    <p> Basic Charge = {price.basiccharge}</p>
+                    <br/>
+                    <p>Height Charge = {price.heightprice}</p>
+                    <br/>
+                    <p> Widht Charge = {price.widthprice}</p>
+                    <br/>
+                    <p> Length Charge = {price.lengthprice}</p>
+                    <br/>
+                    <p> Weight Charge = {price.weightprice}</p>
+                    <b> Total Charges : {price.totalprice}</b>
+                </div>
+
+
+            </template>
+            <template if:false = {prices}>
+
+                <p>No Products Added !!</p>
+            </template>
+            
+            
+
+        </template>
+
+
+
+
+    </lightning-card>
+
+
+
+    
+</template>

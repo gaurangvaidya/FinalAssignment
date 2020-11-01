@@ -1,0 +1,21 @@
+<apex:page controller="CustomerController">
+<!-- Begin Default Content REMOVE THIS -->
+
+<apex:pageBlock title="Select Customer Name">
+        <apex:form>
+                <apex:pageBlockSection>
+                
+                        
+                        <apex:selectList size="1" value="{!selectedValue}">
+                            <apex:selectOptions value="{!customerOrderList}"></apex:selectOptions>
+                        </apex:selectList>
+                        
+                </apex:pageBlockSection>
+        <apex:pageBlockSection>
+            <apex:commandButton value="Generate Invoice" action="{!goToNewPage}"></apex:commandButton>
+        </apex:pageBlockSection>
+
+        </apex:form>
+</apex:pageBlock>
+<!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,39 @@
+<template>
+
+
+    <template if:true={options}>
+        <lightning-card title="Product Details">
+            <lightning-combobox 
+            options={options}
+            value={value}
+            placeholder="Select Order Id"
+            onchange = {handleOnChangeCombo}
+    
+            ></lightning-combobox>
+
+            <lightning-input label="Name" value={name} onchange={handleOnChangeName} disabled={disabledFields}></lightning-input>
+            <lightning-input label="Height" value={height} onchange={handleOnChangeHeight} disabled={disabledFields}>
+
+            </lightning-input>
+            <lightning-input label="Width" value={width} onchange={handleOnChangeWidth} disabled={disabledFields}>
+
+            </lightning-input>
+            <lightning-input label="Length" value={length} onchange={handleOnChangeLength} disabled={disabledFields}>
+
+            </lightning-input>
+            <lightning-input label="Weight" value={weight} onchange={handleOnChangeWeight} disabled={disabledFields}>
+
+            </lightning-input>
+            <lightning-button variant="brand" label="Submit Product Details" onclick={handleOnClickProduct} disabled={dsiabledCreateButton}></lightning-button>
+
+            <lightning-button variant="brand" label="Place Order" onclick={handleOnClickPlace} class="padding" disabled={dsiabledCreateButton}></lightning-button>
+
+        </lightning-card>
+        
+    </template>
+
+    <template if:false={options}>
+        <p>You Dont Have Any Orders That Need Product Detail</p>
+    </template>
+    
+</template>

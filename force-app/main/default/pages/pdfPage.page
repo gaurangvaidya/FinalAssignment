@@ -1,0 +1,29 @@
+<apex:page controller="PdfPageController" renderAs="pdf">
+<!-- Begin Default Content REMOVE THIS -->
+<apex:pageBlock title="Invoice">
+
+
+  <apex:variable var="index" value="{!0}"></apex:variable>
+   <apex:repeat value="{!priceList}" var="price" id="theRepeat">
+       <apex:pageBlockSection title = "{!productName[index]}">
+       <apex:outputText value="{!price['BasicCharge']}">Basic Charges: </apex:outputText>
+       <br/>
+       <apex:outputText value="{!price['HeightCharge']}">Height Charges: </apex:outputText>
+       <br/>
+       <apex:outputText value="{!price['LengthCharge']}">Length Charges: </apex:outputText>
+       <br/>
+       <apex:outputText value="{!price['WidthCharge']}">Width Charges: </apex:outputText>
+       <br/>
+       <apex:outputText value="{!price['WeightCharge']}">Weight Charges: </apex:outputText>
+       <br/>
+       <apex:variable var="index" value="{!index+1}"></apex:variable>
+    </apex:pageBlockSection>
+       </apex:repeat>
+
+
+
+
+</apex:pageBlock>
+
+<!-- End Default Content REMOVE THIS -->
+</apex:page>
